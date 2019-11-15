@@ -53,14 +53,14 @@ class Navbar extends React.Component {
 
     handleCompteSuper = (id_select) => {
         const compteur = this.state.infoProfil[id_select].nbSuper + 1
-        const profil = this.state.infoProfil.slice()
+        const profil = this.state.infoProfil
 
         profil[id_select].nbSuper = compteur
         this.setState(profil)
     }
 
     handleCouleur = (id_select) => {
-        const profil = this.state.infoProfil.slice()
+        const profil = this.state.infoProfil
         if (this.state.infoProfil[id_select].idCouleur < 8 ) {
             const compteur = this.state.infoProfil[id_select].idCouleur + 1
             profil[id_select].idCouleur = compteur
